@@ -7,8 +7,9 @@ public class createScript : MonoBehaviour {
 	public GameObject bananaobject;
 	public int matrix = 3;
 	private bool [,,] cubes = new bool[3,3,3];
+	private int[] coordinates = { 0, 400, 600, 800 };
 
-	public void fillcubeArray() {
+	private void fillcubeArray() {
 		for(int a = 0; a < matrix; a++){
 			for(int b = 0; b < matrix; b++){
 				for(int c = 0; c < matrix; c++) {
@@ -18,24 +19,81 @@ public class createScript : MonoBehaviour {
 		}
 	}
 
-	public void button_onClick(){
+	private void resetCameraLocation() {
+		for (int a = 0; a < 4; a++) {
+			int cameraNumber = a + 1;
+			GameObject.FindWithTag ("camera" + cameraNumber.ToString()).transform.position = new Vector3(coordinates [a],0,-5);
+		}
+	}
+
+	private void randomizeCameraLocation() {
+		int[] tempArray = { 1, 2, 3 ,4 };
+		int[] randomizedArray = randomizeArray (tempArray);
+
+		for (int a = 0; a < randomizedArray.Length; a++) {
+			int cameraNumber = randomizedArray[a];
+			GameObject.FindWithTag ("camera" + cameraNumber.ToString()).transform.position = new Vector3(coordinates [a],0,-5);
+		}
+	}
+
+	// Big O(n^2) please fix them later for practice. 
+	// array is going to be short all the time because array size indicates the number of cameras in the scene.
+
+	//This function returns new randomized array of input array.
+	private int [] randomizeArray(int [] array) {
+		// Knuth shuffle algorithm :: courtesy of Wikipedia :)
+		int [] newArray = new int[array.Length];
+		for (int a = 0; a < array.Length; a++) {
+			newArray [a] = array [a];
+		}
+
+		for (int t = 0; t < newArray.Length; t++ )
+		{
+			int tmp = newArray[t];
+			int r = Random.Range(t, newArray.Length);
+			newArray[t] = newArray[r];
+			newArray[r] = tmp;
+		}
+		return newArray;
+	}
+
+	public void instantiateGame(){
+//		resetCameraLocation ();
+		randomizeCameraLocation ();
 		Destroy(GameObject.Find("Object group1"));
 		Destroy(GameObject.Find("Object group2"));
 		Destroy(GameObject.Find("Object group3"));
 		Destroy(GameObject.Find("Object group4"));
 		fillcubeArray ();
-		GameObject gogo1 = makeObjectWithPosition(cubes, new Vector3(0,0,0),"Object group1");
+		GameObject gogo1 = makeObjectWithPosition(cubes, new Vector3(coordinates[0],0,0),"Object group1");
 		fillcubeArray ();
-		GameObject gogo2 = makeObjectWithPosition(cubes, new Vector3(500,0,0),"Object group2");
+		GameObject gogo2 = makeObjectWithPosition(cubes, new Vector3(coordinates[1],0,0),"Object group2");
 		fillcubeArray ();
-		GameObject gogo3 = makeObjectWithPosition(cubes, new Vector3(510,0,0),"Object group3");
+		GameObject gogo3 = makeObjectWithPosition(cubes, new Vector3(coordinates[2],0,0),"Object group3");
 		fillcubeArray ();
-		GameObject gogo4 = makeObjectWithPosition(cubes, new Vector3(520,0,0),"Object group4");
+		GameObject gogo4 = makeObjectWithPosition(cubes, new Vector3(coordinates[3],0,0),"Object group4");
+
 	}
+
+	public void button_onClick(string cameraNumber){
+		Debug.Log ("I clicked " + cameraNumber);
+		if (GameObject.FindWithTag ("camera" + cameraNumber).transform.position.x == coordinates[0]) {
+			instantiateGame ();
+		} else {
+			Debug.Log ("Wrong,please try again.");
+			whenIncorrect ();
+		}
+	}
+		
+	public void whenIncorrect(){
+		//Do Something
+	}
+
 
 	// Use this for initialization
 	void Start () {
 		fillcubeArray ();
+//		resetCameraLocation ();
 	}
 
 	// Update is called once per frame
