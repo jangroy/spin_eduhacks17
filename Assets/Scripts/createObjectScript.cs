@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class createScript : MonoBehaviour {
+public class createObjectScript : MonoBehaviour {
 	public GameObject appleobject;
 	public GameObject bananaobject;
 	public int matrix = 3;
@@ -56,14 +57,11 @@ public class createScript : MonoBehaviour {
 		}
 		return newArray;
 	}
-
+		
 	public void instantiateGame(){
 //		resetCameraLocation ();
 		randomizeCameraLocation ();
-		Destroy(GameObject.Find("Object group1"));
-		Destroy(GameObject.Find("Object group2"));
-		Destroy(GameObject.Find("Object group3"));
-		Destroy(GameObject.Find("Object group4"));
+		destoryObjects ();
 		fillcubeArray ();
 		GameObject gogo1 = makeObjectWithPosition(cubes, new Vector3(coordinates[0],0,0),"Object group1");
 		fillcubeArray ();
@@ -121,5 +119,12 @@ public class createScript : MonoBehaviour {
 		objects.name = name;
 		objects.AddComponent (System.Type.GetType("rotateScript"));
 		return objects;
+	}
+
+	public void destoryObjects(){
+		Destroy(GameObject.Find("Object group1"));
+		Destroy(GameObject.Find("Object group2"));
+		Destroy(GameObject.Find("Object group3"));
+		Destroy(GameObject.Find("Object group4"));
 	}
 }
