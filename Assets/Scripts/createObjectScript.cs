@@ -60,11 +60,15 @@ public class createObjectScript : MonoBehaviour {
 		}
 		return newArray;
 	}
-		
+
+	public void setUpGame() {
+		destoryObjects ();
+		instantiateGame ();
+	}	
+
 	public void instantiateGame(){
 //		resetCameraLocation ();
 		randomizeCameraLocation ();
-		destoryObjects ();
 		fillcubeArray ();
 		GameObject gogo1 = makeObjectWithPosition(cubes, new Vector3(coordinates[0],0,0),"Object group1");
 		fillcubeArray ();
@@ -80,7 +84,7 @@ public class createObjectScript : MonoBehaviour {
 		Debug.Log ("I clicked " + cameraNumber);
 		if (GameObject.FindWithTag ("camera" + cameraNumber).transform.position.x == coordinates[0]) {
 			changeTextWithNotify ("Correct!");
-			instantiateGame ();
+			setUpGame ();
 		} else {
 			Debug.Log ("Wrong,please try again.");
 			changeTextWithNotify ("Please try again.");
@@ -112,7 +116,7 @@ public class createObjectScript : MonoBehaviour {
 	void Start () {
 		fillcubeArray ();
 //		notifyCorrectText.text = "";
-		instantiateGame ();
+		setUpGame();
 //		resetCameraLocation ();
 	}
 
