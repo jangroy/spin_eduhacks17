@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class createObjectScript : MonoBehaviour {
 	public GameObject appleobject;
 	public GameObject bananaobject;
+	public Text notifyCorrectText;
+	private float time;
+
 	public int matrix = 3;
 	private bool [,,] cubes = new bool[3,3,3];
 	private int[] coordinates = { 0, 400, 600, 800 };
@@ -76,13 +79,30 @@ public class createObjectScript : MonoBehaviour {
 	public void button_onClick(string cameraNumber){
 		Debug.Log ("I clicked " + cameraNumber);
 		if (GameObject.FindWithTag ("camera" + cameraNumber).transform.position.x == coordinates[0]) {
+			changeTextWithNotify ("Correct!");
 			instantiateGame ();
 		} else {
 			Debug.Log ("Wrong,please try again.");
+			changeTextWithNotify ("Please try again.");
 			whenIncorrect ();
 		}
 	}
-		
+
+	private void changeTextWithNotify(string text) {
+		notifyCorrectText.text = text;
+		enableText ();
+		CancelInvoke("disableText");
+		Invoke ("disableText", 1);
+	}
+
+	private void enableText() {
+		notifyCorrectText.enabled = true; 
+	}
+
+	private void disableText() {
+		notifyCorrectText.enabled = false; 
+	}
+
 	public void whenIncorrect(){
 		//Do Something
 	}
@@ -91,6 +111,7 @@ public class createObjectScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		fillcubeArray ();
+		notifyCorrectText.text = "";
 //		resetCameraLocation ();
 	}
 
