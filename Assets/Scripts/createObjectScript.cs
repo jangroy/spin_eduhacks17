@@ -111,7 +111,8 @@ public class createObjectScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		fillcubeArray ();
-		notifyCorrectText.text = "";
+//		notifyCorrectText.text = "";
+		instantiateGame ();
 //		resetCameraLocation ();
 	}
 
