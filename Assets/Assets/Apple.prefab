@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33738224578798382}
   - component: {fileID: 65384016449068636}
   - component: {fileID: 23088149175430592}
-  - component: {fileID: 114901028525266358}
   - component: {fileID: 114023568146831206}
   m_Layer: 0
   m_Name: Apple
@@ -109,18 +108,3 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 20, y: -10}
   m_UseGraphicAlpha: 1
---- !u!114 &114901028525266358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1025511172475650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bef9ccb6bfd1479fb1a25aef299ae0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  appleobject: {fileID: 1025511172475650}
-  bananaobject: {fileID: 0}
-  count: 0
-  matrix: 3

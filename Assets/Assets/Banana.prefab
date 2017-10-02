@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33775920746936186}
   - component: {fileID: 65724641724240280}
   - component: {fileID: 23875129961942202}
-  - component: {fileID: 114121552135151946}
   - component: {fileID: 114204437584752338}
   m_Layer: 0
   m_Name: Banana
@@ -95,21 +94,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114121552135151946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1773178412105970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bef9ccb6bfd1479fb1a25aef299ae0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  appleobject: {fileID: 1773178412105970}
-  bananaobject: {fileID: 0}
-  count: 0
-  matrix: 3
 --- !u!114 &114204437584752338
 MonoBehaviour:
   m_ObjectHideFlags: 1
