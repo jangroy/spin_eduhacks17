@@ -11,7 +11,7 @@ public class createObjectScript : MonoBehaviour {
 
 	public int matrix = 3;
 	private bool [,,] cubes = new bool[3,3,3];
-	private int[] coordinates = { 0, 400, 600, 800 };
+	private int[] coordinates = { 0, 400, 600, 800, -1000};
 
 	private void fillcubeArray() {
 		for(int a = 0; a < matrix; a++){
@@ -24,9 +24,9 @@ public class createObjectScript : MonoBehaviour {
 	}
 
 	private void resetCameraLocation() {
-		for (int a = 0; a < 4; a++) {
+		for (int a = 0; a < 5; a++) {
 			int cameraNumber = a + 1;
-			GameObject.FindWithTag ("camera" + cameraNumber.ToString()).transform.position = new Vector3(coordinates [a],0,-5);
+			GameObject.FindWithTag ("camera" + cameraNumber.ToString()).transform.position = new Vector3(coordinates [a+1],0,-5);
 		}
 	}
 
@@ -36,7 +36,7 @@ public class createObjectScript : MonoBehaviour {
 
 		for (int a = 0; a < randomizedArray.Length; a++) {
 			int cameraNumber = randomizedArray[a];
-			GameObject.FindWithTag ("camera" + cameraNumber.ToString()).transform.position = new Vector3(coordinates [a],0,-5);
+			GameObject.FindWithTag ("camera" + cameraNumber.ToString()).transform.position = new Vector3(coordinates [a+1],0,-5);
 		}
 	}
 
@@ -71,6 +71,7 @@ public class createObjectScript : MonoBehaviour {
 		randomizeCameraLocation ();
 		fillcubeArray ();
 		GameObject gogo1 = makeObjectWithPosition(cubes, new Vector3(coordinates[0],0,0),"Object group1");
+		GameObject gogo5 = makeObjectWithPosition(cubes, new Vector3(coordinates[4],0,0),"Object group1(1)");
 		fillcubeArray ();
 		GameObject gogo2 = makeObjectWithPosition(cubes, new Vector3(coordinates[1],0,0),"Object group2");
 		fillcubeArray ();
@@ -82,7 +83,7 @@ public class createObjectScript : MonoBehaviour {
 
 	public void button_onClick(string cameraNumber){
 		Debug.Log ("I clicked " + cameraNumber);
-		if (GameObject.FindWithTag ("camera" + cameraNumber).transform.position.x == coordinates[0]) {
+		if (GameObject.FindWithTag ("camera" + cameraNumber).transform.position.x == coordinates[4]) {
 			changeTextWithNotify ("Correct!");
 			setUpGame ();
 		} else {
@@ -132,18 +133,24 @@ public class createObjectScript : MonoBehaviour {
 				for(int c = 0; c < matrix; c++) {
 					if (randomArray [a, b, c]) {
 						if ((a + b + c) % 2 == 0) {
-							GameObject go = Instantiate (appleobject, new Vector3 (position.x+a-1, position.y+b-1, -c + position.z+1), Quaternion.Euler (0, 0, 0)) as GameObject;
-							go.transform.parent = objects.transform;
+							GameObject aObject = Instantiate (appleobject, new Vector3 (position.x+a-1, position.y+b-1, -c + position.z+1), Quaternion.Euler (0, 0, 0)) as GameObject;
+							if (name == "Object group1") {
+								aObject.AddComponent (System.Type.GetType("rotateScript"));
+							}
+							aObject.transform.parent = objects.transform;
 						} else {
-							GameObject go2 = Instantiate (bananaobject, new Vector3 (position.x+a-1, position.y+b-1, -c+position.z+1), Quaternion.Euler (0, 0, 0)) as GameObject;
-							go2.transform.parent = objects.transform;
+							GameObject bObject = Instantiate (bananaobject, new Vector3 (position.x+a-1, position.y+b-1, -c+position.z+1), Quaternion.Euler (0, 0, 0)) as GameObject;
+							if (name == "Object group1") {
+								bObject.AddComponent (System.Type.GetType("rotateScript"));
+							}
+							bObject.transform.parent = objects.transform;
 						}
 					}
 				}
 			}
 		}
 		objects.name = name;
-		objects.AddComponent (System.Type.GetType("rotateScript"));
+//		objects.AddComponent (System.Type.GetType("rotateScript"));
 		return objects;
 	}
 
@@ -152,5 +159,6 @@ public class createObjectScript : MonoBehaviour {
 		Destroy(GameObject.Find("Object group2"));
 		Destroy(GameObject.Find("Object group3"));
 		Destroy(GameObject.Find("Object group4"));
+		Destroy(GameObject.Find("Object group1(1)"));
 	}
 }
