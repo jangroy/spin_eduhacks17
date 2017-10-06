@@ -9,8 +9,8 @@ public class createObjectScript : MonoBehaviour {
 	public Text notifyCorrectText;
 	private float time;
 
-	public int matrix = 3;
-	private bool [,,] cubes = new bool[3,3,3];
+	private int matrix;
+	private bool [,,] cubes;
 	private int[] coordinates = { 0, 400, 600, 800, -1000};
 
 	private void fillcubeArray() {
@@ -115,6 +115,10 @@ public class createObjectScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		matrix = PlayerPrefs.GetInt("difficulty");
+		cubes = new bool[PlayerPrefs.GetInt("difficulty"), PlayerPrefs.GetInt("difficulty"), PlayerPrefs.GetInt("difficulty")];
+
+		// Debug.Log(PlayerPrefs.GetInt("difficulty"));
 		fillcubeArray ();
 //		notifyCorrectText.text = "";
 		setUpGame();

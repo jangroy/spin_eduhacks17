@@ -1625,7 +1625,6 @@ MonoBehaviour:
   bananaobject: {fileID: 1773178412105970, guid: 72592b7f0b87c43cdb52fa7aeea39581,
     type: 2}
   notifyCorrectText: {fileID: 1985421230}
-  matrix: 3
 --- !u!124 &1619467327
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1715,7 +1714,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
