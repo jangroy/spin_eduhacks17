@@ -187,7 +187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &182075893
 Prefab:
@@ -367,9 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a00b7a751ec434d88a7f5809b37ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 5
-  timerText: {fileID: 0}
-  btn: {fileID: 0}
 --- !u!1 &222942946
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +634,7 @@ GameObject:
   - component: {fileID: 628093931}
   - component: {fileID: 628093930}
   - component: {fileID: 628093929}
-  - component: {fileID: 628093932}
+  - component: {fileID: 628093933}
   m_Layer: 5
   m_Name: btnBack
   m_TagString: Untagged
@@ -703,9 +700,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628093932}
-        m_MethodName: LoadByScene
-        m_Mode: 5
+      - m_Target: {fileID: 628093933}
+        m_MethodName: back
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -749,7 +746,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 628093927}
---- !u!114 &628093932
+--- !u!114 &628093933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -757,7 +754,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 628093927}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c46d42fc3a4380147aa4723ca32fe3e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b6c0007ba4184e4abfbe2daed23a372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &655632375
@@ -901,7 +898,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &796411169
 Prefab:
@@ -1117,7 +1114,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1236622260
 Prefab:
