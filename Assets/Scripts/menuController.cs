@@ -10,11 +10,16 @@ public class menuController : MonoBehaviour {
 		//buttons [] 0 = play, 1 = fidget, 2 = help, 3,4,5, = difficulty
 		buttons = GetComponentsInChildren<Button>(true);
 		buttons[0].GetComponent<Button>().onClick.AddListener(TaskOnClick);
-		for (int i = 0; i < buttons.Length; i++) {
-			Debug.Log("buttons[" + i + "]: " + buttons[i]);
-		}
+		buttons[1].GetComponent<Button>().onClick.AddListener(loadFigdet);
+		for (int i = 0; i < buttons.Length; i++) 
+			{
+				Debug.Log("buttons[" + i + "]: " + buttons[i]);
+			}
     }
 
+		void loadFigdet() {
+			SceneManager.LoadScene("fidgetScene");
+		}
     void TaskOnClick()
     {	
 		// Debug.Log(buttons[0].gameObject);
