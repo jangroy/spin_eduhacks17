@@ -620,9 +620,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: ebac4d6e-fc37-47a5-aad3-3253f4bb7dab
-  projectName: spin
-  organizationId: wtfroy
+  cloudProjectId: a81dabf8-8340-4e1a-afb8-aef3d395ce6f
+  projectName: spin (1)
+  organizationId: kbhangel
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
