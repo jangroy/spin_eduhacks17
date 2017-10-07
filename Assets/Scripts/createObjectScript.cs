@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class createObjectScript : MonoBehaviour {
 	public GameObject appleobject;
 	public GameObject bananaobject;
+	public GameObject arrow;
 	public Text notifyCorrectText;
 	private float time;
 
@@ -154,6 +155,12 @@ public class createObjectScript : MonoBehaviour {
 					}
 				}
 			}
+		}
+		if (name == "Object group1") {
+			GameObject gameArrow = Instantiate (arrow) as GameObject;
+			gameArrow.AddComponent (System.Type.GetType ("rotateScript"));
+			gameArrow.transform.parent = objects.transform;
+			Debug.Log ("print tis");
 		}
 		objects.name = name;
 //		objects.AddComponent (System.Type.GetType("rotateScript"));

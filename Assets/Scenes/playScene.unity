@@ -1624,6 +1624,7 @@ MonoBehaviour:
     type: 2}
   bananaobject: {fileID: 1773178412105970, guid: 72592b7f0b87c43cdb52fa7aeea39581,
     type: 2}
+  arrow: {fileID: 1482902110939086, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
   notifyCorrectText: {fileID: 1985421230}
 --- !u!124 &1619467327
 Behaviour:
@@ -1827,52 +1828,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985421228}
---- !u!1001 &1986357367
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482902110939086, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2001431708
 GameObject:
   m_ObjectHideFlags: 0

@@ -143,7 +143,7 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
-    Android: com.android.spin
+    Android: com.unity3D.spinGamePuzzle
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -259,7 +259,10 @@ PlayerSettings:
       m_Height: 36
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
-  m_BuildTargetVRSettings: []
+  m_BuildTargetVRSettings:
+  - m_BuildTarget: Android
+    m_Enabled: 1
+    m_Devices: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   webPlayerTemplate: APPLICATION:Default
@@ -621,9 +624,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: ebac4d6e-fc37-47a5-aad3-3253f4bb7dab
-  projectName: spin
-  organizationId: wtfroy
+  cloudProjectId: a81dabf8-8340-4e1a-afb8-aef3d395ce6f
+  projectName: spin (1)
+  organizationId: kbhangel
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
