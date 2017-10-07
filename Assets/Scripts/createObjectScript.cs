@@ -117,6 +117,8 @@ public class createObjectScript : MonoBehaviour {
 	void Start () {
 		matrix = PlayerPrefs.GetInt("difficulty");
 		cubes = new bool[PlayerPrefs.GetInt("difficulty"), PlayerPrefs.GetInt("difficulty"), PlayerPrefs.GetInt("difficulty")];
+		GameObject arrowTxt = (GameObject)GameObject.Find("arrow");
+		// arrowTxt.transform.SetParent("Object Group1");
 
 		// Debug.Log(PlayerPrefs.GetInt("difficulty"));
 		fillcubeArray ();

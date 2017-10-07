@@ -230,15 +230,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4280421691933342, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4280421691933342, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4280421691933342, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1252541189991216, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
       propertyPath: m_Name
@@ -929,15 +929,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4280421691933342, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1000
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4280421691933342, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4280421691933342, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4500d8076c41a1b41af94972628cd5ba, type: 2}
@@ -1714,12 +1714,12 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1733,7 +1733,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -1827,6 +1827,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985421228}
+--- !u!1001 &1986357367
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688894196228566, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482902110939086, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7078018481d5c88418d8938f9c4509fb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2001431708
 GameObject:
   m_ObjectHideFlags: 0
