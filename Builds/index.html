@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | spin</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Builds.json");
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+        div {
+          font-family: 'Source Sans Pro', sans-serif;
+        }
+        a {
+          text-decoration: none;
+          color: blue;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        .container {
+          display: -webkit-flex;
+          display: flex;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          letter-spacing: 2px;
+        }
+        
+        .right {
+          margin-left:5%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="gameContainer" style="width: 480px; height: 800px; margin: auto"></div>
+        <div class="right">
+          <h1>project SPIN</h1>
+          <p>For Eduhacks2017 Hackathon</p>
+          <p>Devs:<br>
+            Daniel Kang <a href="https://github.com/kbhangel">@github</a></br>
+            Roy Jang   <a href="https://github.com/jangroy">@github</a></br>
+            Peter Park <a href="https://github.com/mavenpcs">@github</a></br>
+            Alice Kim</br>
+            Julie Jen</br>
+          </p>
+          <p><a href="https://play.google.com/store/apps/details?id=com.unity3D.spinGamePuzzle">Android Release</a></p>
+        </div>
+    </div>
+  </body>
+</html>
