@@ -3,11 +3,11 @@ SPIN
 Hackathon 2017 Team Project made in Unity.
 
 
-Members:<br > 
-Daniel Kang<br >
-Peter Park<br >
-Alice Kim<br >
-Roy Jang<br >
-Julie Jen<br >
+Members:   
+* Daniel Kang  
+* Peter Park  
+* Alice Kim  
+* Roy Jang  
+* Julie Jen  
 
-WebGL Live Demo: https://jangroy.github.io/spin_eduhacks17/
+[Live Demo](https://jangroy.github.io/spin_eduhacks17/)
